@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Ads Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <div class="logo-img">AC</div>
+                    <span class="logo-text">Ads Connect</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="brand.html">Produk (Brand)</a></li>
+                    <li><a href="creator.html">Content Creator</a></li>
+                    <li><a href="testimonial.html">Testimonial</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-secondary">Masuk</a>
+                    <a href="register.html" class="btn btn-primary">Daftar</a>
+                </div>
+                
+                <button class="mobile-menu-btn">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="faq-section">
+            <div class="container">
+                <div class="page-header">
+                    <h2>Pertanyaan yang Sering Diajukan (FAQ)</h2>
+                    <p>Temukan jawaban untuk pertanyaan umum mengenai platform Ads Connect.</p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apa itu Ads Connect?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ads Connect adalah sebuah platform yang mempertemukan Brand (pemilik produk) dengan Content Creator untuk menjalin kerja sama dalam pembuatan konten promosi yang otentik dan efektif.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bagaimana cara mendaftar?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Anda bisa mendaftar dengan menekan tombol "Daftar" di pojok kanan atas halaman. Anda akan diminta untuk memilih peran sebagai "Brand" atau "Kreator" dan mengisi data yang diperlukan.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bagaimana cara saya menemukan kreator yang tepat untuk brand saya?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Setelah mendaftar sebagai Brand, Anda dapat menggunakan fitur pencarian dan filter di halaman "Cari Kreator". Platform kami juga menyediakan sistem rekomendasi pintar yang akan mencocokkan kreator sesuai dengan niche produk Anda.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apakah ada biaya untuk bergabung sebagai kreator?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Bergabung dan membuat profil di Ads Connect adalah gratis untuk semua kreator. Anda dapat langsung menjelajahi peluang kolaborasi yang tersedia setelah profil Anda terverifikasi.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bagaimana sistem pembayaran bekerja?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ads Connect menyediakan sistem pembayaran yang aman. Dana dari Brand akan ditahan oleh sistem kami (sistem escrow) dan akan dicairkan kepada Kreator setelah semua brief pekerjaan diselesaikan dan disetujui oleh Brand. Ini menjamin keamanan bagi kedua belah pihak.</p>
+                        </div>
+                    </div>
+
+                     <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apa keuntungan menggunakan Ads Connect dibandingkan mencari manual?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Keuntungannya meliputi: efisiensi waktu, akses ke ribuan pengguna terverifikasi, sistem manajemen brief terpusat, sistem rating dan review yang transparan, serta keamanan transaksi. Semua ada dalam satu dasbor yang mudah digunakan.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+       </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const questionButton = item.querySelector('.faq-question');
+
+                questionButton.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('active');
+
+                    // Tutup semua item lain
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Buka atau tutup item yang diklik
+                    if (!isOpen) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
